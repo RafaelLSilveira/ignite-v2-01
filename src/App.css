@@ -1,0 +1,148 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  /* colors */
+  --purple: #8284FA;
+  --purple-dark: #5360CE;
+  --blue: #4EA8DE;
+  --blue-dark: #1E6F9F;
+  --gray-700: #0D0D0D;
+  --gray-600: #1A1A1A;
+  --gray-500: #262626;
+  --gray-400: #333333;
+  --gray-300: #808080;
+  --gray-200: #D9D9D9;
+  --gray-100: #F2F2F2;
+  --danger: #E25858;
+}
+
+body {
+  background: #454545;
+}
+
+.todo-header {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 0;
+  
+  background: var(--gray-700);
+}
+
+.todo-logo {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 126px;
+  height: 48px;
+}
+
+.action-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+  margin-top: -72px;
+}
+
+.action-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--gray-100);
+  width: 90px;
+  height: 52px;
+  background: var(--blue-dark);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 2s background;
+}
+
+.action-container div:hover{
+  background: var(--blue);
+}
+
+.action-container input {
+  font-family: 'Inter', sans-serif;
+  padding: 0 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--gray-300);
+  width: 638px;
+  height: 54px;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+}
+
+input:focus {
+  color: var(--gray-100);
+}
+
+.header-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  align-items: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: var(--purple);
+}
+
+.header-list span {
+  display: inline-block;
+  width: 24px;
+  height: 16px;
+  margin-left: 4px;
+  background: #333333;
+  border-radius: 99999px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--gray-200);
+}
+
+.empty-list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.empty-list img {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+}
+
+.text {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: var(--gray-300);
+}
